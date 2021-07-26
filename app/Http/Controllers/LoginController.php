@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Module;
 
 class LoginController extends Controller
 {
@@ -22,7 +23,8 @@ class LoginController extends Controller
         $result = User::where("email",$request->email)->where("password",md5($request->password))->first();
     
         if($result) {
-            return view('welcome');
+            $firstModule = Module::where("active",1)->orderby("order","ASC")->first();
+            return redirect("/admin/".$firstModule->type);
         }
         else{
             return view('login');
