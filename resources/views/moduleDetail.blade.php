@@ -73,7 +73,7 @@
                         </div>
                         <div class="form-group m-form__group row">
                             <label class="col-form-label col-md-2"> Resim </label>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div id="single" class="gallery">
                                     <div class="listItems">
                                         <div class="image-box">

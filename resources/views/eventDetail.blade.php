@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group m-form__group row">
                             <label class="col-form-label col-md-2"> Başlangıç Tarihi </label>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class='input-group date'>
                                     <input type='text' class="form-control m-input datetimepicker" value="<?php echo $startDate;?>" name="startDate" placeholder="Tarih / Saat Seçiniz" />
                                     <div class="input-group-append">
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <label class="col-form-label col-md-2"> Bitiş Tarihi </label>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <div class='input-group date'>
                                     <input type='text' class="form-control m-input datetimepicker" value="<?php echo $endDate;?>" name="endDate" placeholder="Tarih / Saat Seçiniz" />
                                     <div class="input-group-append">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group m-form__group row">
                             <label class="col-form-label col-md-2"> Resim </label>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <div id="single" class="gallery">
                                     <div class="listItems">
                                         <div class="image-box">
