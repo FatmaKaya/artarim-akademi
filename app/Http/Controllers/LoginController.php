@@ -23,12 +23,20 @@ class LoginController extends Controller
         $result = User::where("email",$request->email)->where("password",md5($request->password))->first();
     
         if($result) {
+
+            $panelMenu = Module::where("active",1)->orderby("order","ASC")->get();
+            session(["panelMenu"=>$panelMenu]);
+
             $firstModule = Module::where("active",1)->orderby("order","ASC")->first();
             return redirect("/admin/".$firstModule->type);
         }
         else{
             return view('login');
         }
+    }
+
+    public function logout(Request $request){
+        return redirect('/');
     }
 
 }
