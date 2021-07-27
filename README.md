@@ -1,4 +1,4 @@
-# To Do App
+# Ar Tarım Akademi 
 
 #### Açıklama :
 Ana sayfada bulunan "Yaklaşan etkinlikler" ve "Açık Pozisyonlar" bölümleri için CMS modüllerinin geliştirilmesi, bu modüller için kullanıcı arayüzü üzerinden içerik girilebilmesi, içeriklerin ilgili kısımlarının ana sayfada, diğer kısımlarının alt sayfalarda yer alması bekleniyor. Yaklaşan etkinlikler bölümünde eklenen her etkinliğin kullanıcı tarafından takvime eklenebilmesi gerekiyor. Açık Pozisyonlar bölümünde ise girilen iş ilanlarının yayından kaldırılabilme özelliği olmalı.
