@@ -19,6 +19,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', '\App\Http\Controllers\LoginController@index');
 Route::post('/', '\App\Http\Controllers\LoginController@login');
 Route::get('/admin/logout', '\App\Http\Controllers\LoginController@logout');
+Route::post('/admin/general/upload', '\App\Http\Controllers\CoreController@upload');
+
+//Modules
+Route::get('/admin/modules', '\App\Http\Controllers\ModuleController@index');
+Route::get('/admin/modules/add', '\App\Http\Controllers\ModuleController@show');
+Route::post('/admin/modules/add', '\App\Http\Controllers\ModuleController@create');
+Route::get('/admin/modules/edit/{id}', '\App\Http\Controllers\ModuleController@edit')->where('id', '[0-9]+');
+Route::post('/admin/modules/edit/{id}', '\App\Http\Controllers\ModuleController@update')->where('id', '[0-9]+');
+Route::get('/admin/modules/delete/{id}', '\App\Http\Controllers\ModuleController@destroy')->where('id', '[0-9]+');
+Route::post('/admin/modules/order', '\App\Http\Controllers\ModuleController@order');
 
 //Events
 Route::get('/admin/events', '\App\Http\Controllers\EventController@index');

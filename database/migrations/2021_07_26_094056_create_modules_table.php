@@ -23,6 +23,7 @@ class CreateModulesTable extends Migration
             $table->string('icon');
             $table->integer('order');
             $table->boolean('active');
+            $table->string('imageurl',2000);
             $table->timestamps();
         });
     }

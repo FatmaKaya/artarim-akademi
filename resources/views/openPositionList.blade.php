@@ -7,7 +7,7 @@
                     <div class="m-portlet__head-caption">
                         <div class="m-portlet__head-title">
                             <h3 class="m-portlet__head-text">
-                                Yaklaşan Etkinlikler
+                                Açık Pozisyonlar
                                 <small>
                                     Listesi
                                 </small>
@@ -31,7 +31,7 @@
                                     <span>
                                         <i class="flaticon-plus"></i>
                                         <span>
-                                            Yeni Bilgi
+                                            Yeni Pozisyon
                                         </span>
                                     </span>
                                 </a>
@@ -47,7 +47,7 @@
                                     <div class="m-portlet__head-caption">
                                         <div class="m-portlet__head-title" style="width: 100%">
                                             <h3 class="m-portlet__head-text" >
-                                                Bilgiler
+                                                Pozisyonlar
                                                 <small style="float: right">
                                                     <i class="la la-arrows"></i> Mouse ile sürükle bırak sıralayınız
                                                 </small>

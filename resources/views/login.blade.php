@@ -31,7 +31,7 @@
             <div class="m-login__container">
                 <div class="m-login__logo">
                     <a href="#">
-                        <img src="{{asset("/images/logo.png")}}" style="height:165px;">
+                        <img src="{{asset("/images/Logo.svg")}}" style="height:165px;">
                     </a>
                 </div>
                 <div class="m-login__signin">

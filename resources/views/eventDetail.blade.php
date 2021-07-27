@@ -1,12 +1,9 @@
 @extends('_layouts.default')
 @section('content')
     <?php
-   
     if(isset($result["item"]["id"])) {
         $title = "Etkinlik Düzenle";
-     
         $startDate = date("Y.m.d H:i", strtotime(@$result["item"]["startDate"]));
-        //dd( $startDate);
         $endDate = date("Y.m.d H:i", strtotime(@$result["item"]["endDate"]));
     } else {
         $title = "Etkinlik Ekle";

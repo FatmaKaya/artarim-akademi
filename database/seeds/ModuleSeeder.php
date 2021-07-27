@@ -21,6 +21,7 @@ class ModuleSeeder extends Seeder
                 "icon" => 'loyalty',
                 "order" => 1,
                 "active" => 1,
+                "imageurl" => "http://127.0.0.1:8000/uploads/etkinlikler-head.jpg",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s") 
             ],
@@ -34,6 +35,7 @@ class ModuleSeeder extends Seeder
                 "icon" => 'work',
                 "order" => 2,
                 "active" => 1,
+                "imageurl" => "http://127.0.0.1:8000/uploads/acik-pozisyonlar-head.jpg",
                 "created_at" => date("Y-m-d H:i:s"),
                 "updated_at" => date("Y-m-d H:i:s") 
             ],

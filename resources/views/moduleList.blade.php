@@ -7,7 +7,7 @@
                     <div class="m-portlet__head-caption">
                         <div class="m-portlet__head-title">
                             <h3 class="m-portlet__head-text">
-                                Yaklaşan Etkinlikler
+                                Uygulama Modüller
                                 <small>
                                     Listesi
                                 </small>
@@ -27,14 +27,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-4 order-1 order-xl-2 m--align-right">
-                                <a href="{{env("APP_URL")}}/admin/events/add" class="btn btn-primary m-btn m-btn--custom m-btn--pill m-btn--icon m-btn--air">
-                                    <span>
-                                        <i class="flaticon-plus"></i>
-                                        <span>
-                                            Yeni Etkinlik
-                                        </span>
-                                    </span>
-                                </a>
+                                
                                 <div class="m-separator m-separator--dashed d-xl-none"></div>
                             </div>
                             
@@ -47,7 +40,7 @@
                                     <div class="m-portlet__head-caption">
                                         <div class="m-portlet__head-title" style="width: 100%">
                                             <h3 class="m-portlet__head-text" >
-                                                Etkinlikler
+                                                Modüller
                                                 <small style="float: right">
                                                     <i class="la la-arrows"></i> Mouse ile sürükle bırak sıralayınız
                                                 </small>
@@ -64,8 +57,8 @@
                                             <strong class="item-move"><a href="#" class=" m-portlet__nav-link btn m-btn btn-secondary m-btn--icon m-btn--icon-only m-btn--pill"><i class="la la-arrows"></i></a></strong>
                                             <span><?php echo $value["name"];?></span>
                                             <div class="islem">
-                                                <a href="<?php echo env("APP_URL")."/admin/events/edit/".$value["id"];?>" class="edit-button m-portlet__nav-link btn m-btn btn-primary m-btn--icon m-btn--icon-only m-btn--pill"><i class="la la-edit"></i></a>
-                                                <a href="<?php echo env("APP_URL")."/admin/events/delete/".$value["id"];?>" class="delete-button m-portlet__nav-link btn m-btn btn-danger m-btn--icon m-btn--icon-only m-btn--pill"><i class="la la-trash"></i></a>
+                                                <a href="<?php echo env("APP_URL")."/admin/modules/edit/".$value["id"];?>" class="edit-button m-portlet__nav-link btn m-btn btn-primary m-btn--icon m-btn--icon-only m-btn--pill"><i class="la la-edit"></i></a>
+                                                <a href="<?php echo env("APP_URL")."/admin/modules/delete/".$value["id"];?>" class="delete-button m-portlet__nav-link btn m-btn btn-danger m-btn--icon m-btn--icon-only m-btn--pill"><i class="la la-trash"></i></a>
                                             </div>
                                         </li>
                                         <?php } ?>
@@ -89,7 +82,7 @@
     <script>
         jQuery(document).ready(function(){
             imageUpload("#single","imageurl");
-            shortFunc($('.sortable'),'/admin/events/order');
+            shortFunc($('.sortable'),'/admin/modules/order');
             function shortFunc (element, url) {
                 element.nestedSortable({
                     axis: 'y',

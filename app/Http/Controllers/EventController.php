@@ -36,6 +36,7 @@ class EventController extends Controller
         if(@$arr["category"]==null) $arr["category"] = "";
         if(@$arr["name"]==null) $arr["name"] = "";
         if(@$arr["content"]==null) $arr["content"] = "";
+        if(@$arr["imageurl"]==null) $arr["imageurl"] = "";
 
         $result = Event::create($arr);
         
@@ -103,6 +104,7 @@ class EventController extends Controller
         if(@$arr["category"]==null) $arr["category"] = "";
         if(@$arr["name"]==null) $arr["name"] = "";
         if(@$arr["content"]==null) $arr["content"] = "";
+        if(@$arr["imageurl"]==null) $arr["imageurl"] = "";
 
         $result = Event::find($id)->update($arr);
 

@@ -2,9 +2,6 @@
 <html lang="tr" >
 <head>
     <meta charset="utf-8" />
-    <title>
-    {{--    {{session("event")->caption}}--}}
-    </title>
     <meta name="description" content="Api events examples">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -119,7 +116,7 @@
                                                     <div class="m-scrollable" data-scrollable="false" data-max-height="100" data-mobile-max-height="200">
                                                         <div class="m-nav-grid m-nav-grid--skin-light">
                                                             <div class="m-nav-grid__row">
-                                                                <a href="<?php echo env("APP_URL");?>/admin/events/edit/{{session("event_id")}}" class="m-nav-grid__item" >
+                                                                <a href="<?php echo env("APP_URL");?>/admin/modules" class="m-nav-grid__item" >
                                                                     <i class="m-nav-grid__icon flaticon-cogwheel-2"></i>
                                                                     <span class="m-nav-grid__text">
 																				Ayarlar
@@ -175,11 +172,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(".change-event button").on("click",function () {
-                location.href = "/admin/events/change/"+$(".change-event #events").val();
-            })
-        </script>
     </div>
     <!-- END: Header -->
     <!-- begin::Body -->
