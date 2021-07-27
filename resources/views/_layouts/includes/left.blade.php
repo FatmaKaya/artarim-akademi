@@ -18,6 +18,8 @@ $url = str_replace("admin/","",$url);
 $url = ltrim($url,"/");
 $urlArr = explode("/",$url);
 $url = $urlArr[0];
+
+$panelMenu = session('panelMenu');
 ?>
 <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-light ">
     <div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-light m-aside-menu--submenu-skin-light" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">

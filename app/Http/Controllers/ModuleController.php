@@ -15,12 +15,8 @@ class ModuleController extends Controller
     public function index()
     {
         $result["items"] = Module::orderby("order","ASC")->get();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        //dd($result);
-        return view("moduleList",$data);
+
+        return view("moduleList",["result" => $result]);
     }
 
     /**
@@ -64,11 +60,8 @@ class ModuleController extends Controller
     public function edit($id)
     {
         $result["item"] = Module::where("id",$id)->first();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("moduleDetail",$data);
+
+        return view("moduleDetail",["result" => $result]);
     }
 
     /**
@@ -94,11 +87,11 @@ class ModuleController extends Controller
         $result = Module::find($id)->update($arr);
 
         $results["items"] = Module::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("moduleList",$data);
+
+        $panelMenu = Module::where("active",1)->orderby("order","ASC")->get();
+        session(["panelMenu"=>$panelMenu]);
+        
+        return view("moduleList",["result" => $results]);
     }
 
     /**
@@ -112,11 +105,11 @@ class ModuleController extends Controller
         $result = Module::destroy([$id]);
 
         $results["items"] = Module::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("moduleList",$data);
+
+        $panelMenu = Module::where("active",1)->orderby("order","ASC")->get();
+        session(["panelMenu"=>$panelMenu]);
+
+        return view("moduleList",["result" => $results]);
     }
 
     
@@ -127,6 +120,10 @@ class ModuleController extends Controller
                 Module::find((int)$value["id"])->update(array("order"=>$key));
             }
         }
+
+        $panelMenu = Module::where("active",1)->orderby("order","ASC")->get();
+        session(["panelMenu"=>$panelMenu]);
+
         return $request->list_order;
     }
 }

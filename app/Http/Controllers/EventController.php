@@ -15,12 +15,8 @@ class EventController extends Controller
     public function index()
     {
         $result["items"] = Event::orderby("order","ASC")->get();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        //dd($result);
-        return view("eventList",$data);
+
+        return view("eventList",["result" => $result]);
     }
 
     /**
@@ -41,11 +37,8 @@ class EventController extends Controller
         $result = Event::create($arr);
         
         $results["items"] = Event::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("eventList",$data);
+
+        return view("eventList",["result" => $results]);
     }
 
     /**
@@ -67,10 +60,7 @@ class EventController extends Controller
      */
     public function show()
     {
-        $data = [
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("eventDetail",$data);
+        return view("eventDetail");
     }
 
     /**
@@ -82,11 +72,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $result["item"] = Event::where("id",$id)->first();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("eventDetail",$data);
+        return view("eventDetail",["result" => $result]);
     }
 
     /**
@@ -109,11 +95,8 @@ class EventController extends Controller
         $result = Event::find($id)->update($arr);
 
         $results["items"] = Event::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("eventList",$data);
+
+        return view("eventList",["result" => $results]);
     }
 
     /**
@@ -127,11 +110,8 @@ class EventController extends Controller
         $result = Event::destroy([$id]);
 
         $results["items"] = Event::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("eventList",$data);
+
+        return view("eventList",["result" => $results]);
     }
 
     public function order(Request $request) {

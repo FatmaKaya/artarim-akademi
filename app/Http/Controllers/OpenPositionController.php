@@ -15,12 +15,8 @@ class OpenPositionController extends Controller
     public function index()
     {
         $result["items"] = OpenPosition::orderby("order","ASC")->get();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        //dd($result);
-        return view("openPositionList",$data);
+
+        return view("openPositionList",["result" => $result]);
     }
 
     /**
@@ -41,11 +37,8 @@ class OpenPositionController extends Controller
         $result = OpenPosition::create($arr);
         
         $results["items"] = OpenPosition::orderby("order","ASC")->get();
-            $data = [
-                "result" => $results,
-                "panelMenu" => session('panelMenu'),
-            ];
-            return view("openPositionList",$data);
+
+        return view("openPositionList",["result" => $results]);
     }
 
     /**
@@ -67,10 +60,7 @@ class OpenPositionController extends Controller
      */
     public function show()
     {
-        $data = [
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("openPositionDetail",$data);
+        return view("openPositionDetail");
     }
 
     /**
@@ -82,11 +72,8 @@ class OpenPositionController extends Controller
     public function edit($id)
     {
         $result["item"] = OpenPosition::where("id",$id)->first();
-        $data = [
-            "result" => $result,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("openPositionDetail",$data);
+ 
+        return view("openPositionDetail",["result" => $result]);
     }
 
     /**
@@ -109,11 +96,8 @@ class OpenPositionController extends Controller
         $result = OpenPosition::find($id)->update($arr);
 
         $results["items"] = OpenPosition::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("openPositionList",$data);
+
+        return view("openPositionList",["result" => $results]);
     }
 
     /**
@@ -127,11 +111,8 @@ class OpenPositionController extends Controller
         $result = OpenPosition::destroy([$id]);
 
         $results["items"] = OpenPosition::orderby("order","ASC")->get();
-        $data = [
-            "result" => $results,
-            "panelMenu" => session('panelMenu'),
-        ];
-        return view("openPositionList",$data);
+
+        return view("openPositionList",["result" => $results]);
     }
 
     public function order(Request $request) {
