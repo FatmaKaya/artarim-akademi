@@ -36,23 +36,15 @@ class EventController extends Controller
         if(@$arr["category"]==null) $arr["category"] = "";
         if(@$arr["name"]==null) $arr["name"] = "";
         if(@$arr["content"]==null) $arr["content"] = "";
+
         $result = Event::create($arr);
         
-        if($result) {
-            $results["items"] = Event::orderby("order","ASC")->get();
-            $data = [
-                "result" => $results,
-                "panelMenu" => session('panelMenu'),
-            ];
-            return view("eventList",$data);
-        } else {
-            $results["items"] = Event::orderby("order","ASC")->get();
-            $data = [
-                "result" => $results,
-                "panelMenu" => session('panelMenu'),
-            ];
-            return view("eventList",$data);
-        }
+        $results["items"] = Event::orderby("order","ASC")->get();
+        $data = [
+            "result" => $results,
+            "panelMenu" => session('panelMenu'),
+        ];
+        return view("eventList",$data);
     }
 
     /**
@@ -86,7 +78,7 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Request $request)
+    public function edit($id)
     {
         $result["item"] = Event::where("id",$id)->first();
         $data = [
@@ -114,21 +106,12 @@ class EventController extends Controller
 
         $result = Event::find($id)->update($arr);
 
-        if($result) {
-            $results["items"] = Event::orderby("order","ASC")->get();
-            $data = [
-                "result" => $results,
-                "panelMenu" => session('panelMenu'),
-            ];
-            return view("eventList",$data);
-        } else {
-            $results["items"] = Event::orderby("order","ASC")->get();
-            $data = [
-                "result" => $results,
-                "panelMenu" => session('panelMenu'),
-            ];
-            return view("eventList",$data);
-        }
+        $results["items"] = Event::orderby("order","ASC")->get();
+        $data = [
+            "result" => $results,
+            "panelMenu" => session('panelMenu'),
+        ];
+        return view("eventList",$data);
     }
 
     /**
