@@ -39,6 +39,17 @@ php artisan key:generate
 
 php artisan serve
 ```
+
+Giriş bilgileri :
+
+```sh
+email : kaya.fatma.kaya@hotmail.com
+
+password : psw123.
+```
+
+
+
 #### Ekran Görüntüleri
 
 ![alt text](https://raw.githubusercontent.com/FatmaKaya/toDoApp/main/public/.PNG?token=)
