@@ -51,9 +51,17 @@ password : psw123.
 
 
 #### Ekran Görüntüleri
+Login :
 
-![alt text](https://raw.githubusercontent.com/FatmaKaya/toDoApp/main/public/.PNG?token=)
+![alt text](https://raw.githubusercontent.com/FatmaKaya/artarim-akademi/main/public/images/login.PNG)
 
+Home :
+
+![alt text](https://raw.githubusercontent.com/FatmaKaya/artarim-akademi/main/public/images/home.PNG)
+
+Module : 
+
+![alt text](https://raw.githubusercontent.com/FatmaKaya/artarim-akademi/main/public/images/module.PNG)
 
 
 
