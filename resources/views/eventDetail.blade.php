@@ -31,7 +31,7 @@
                     {{ csrf_field() }}
                     <div class="m-portlet__body">
                         <div class="form-group m-form__group row">
-                            <label class="col-form-label col-md-2"> Kategory: </label>
+                            <label class="col-form-label col-md-2"> Kategori: </label>
                             <div class="col-lg-10">
                                 <input type="text" name="category" value="<?php echo @$result['item']["category"];?>" class="form-control m-input">
                             </div>

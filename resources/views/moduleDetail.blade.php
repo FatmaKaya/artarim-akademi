@@ -31,7 +31,7 @@
                             <div class="col-lg-3">
                                 <input type="text" name="type" value="<?php echo @$result['item']["type"];?>" class="form-control m-input">
                             </div>
-                            <label class="col-form-label col-md-2"> Kategory: </label>
+                            <label class="col-form-label col-md-2"> Kategori: </label>
                             <div class="col-lg-3">
                                 <input type="text" name="category" value="<?php echo @$result['item']["category"];?>" class="form-control m-input">
                             </div>
