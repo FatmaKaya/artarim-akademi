@@ -51,10 +51,7 @@
                         <div class="form-group m-form__group row">
                             <label class="col-form-label col-md-2">  Açıklama </label>
                             <div class="col-lg-10 col-md-10 col-sm-12">
-                            <div class=" m-input-icon--left turkish">
-                                    <span class="m-input-icon__icon m-input-icon__icon--left">
-                                        <span> <i class="lang tr"></i></span>
-                                    </span>
+                            <div class=" m-input-icon--left">
                                     <textarea id="demo2" name="content"  rows="6" placeholder="Açıklama"
                                       class="ckeditor form-control col-md-12"><?php echo @$result["item"]["content"]?></textarea>
                                      
